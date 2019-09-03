@@ -14,7 +14,8 @@ body{
     height: 75px;
     margin-left: 10px;
 }
-.login{
+.login,
+.registro{
     background: linear-gradient(#BCBBC0, #AB88FF);
     display: flex;
     align-items: center;
@@ -23,7 +24,8 @@ body{
     padding: 0px 30px;
     min-height: calc(100vh - 200px);
 }
-.login__container{
+.login__container,
+.registro__container{
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #FFFFFF;
     border-radius: 40px;
@@ -35,11 +37,13 @@ body{
     justify-content: space-around;
     flex-direction: column;
 }
-.login__container--form{
+.login__container--form,
+.registro__container--form{
     display: flex;
     flex-direction: column;
 }
-.login__container--form label{
+.login__container--form label,
+.registro__container--form label{
     font-size: 14px;
 }
 .login__container--remember{
@@ -69,13 +73,15 @@ body{
 .login__container--register{
     font-size: 14px;
 }
-.login__container--register a{
+.login__container--register a,
+.registro__container--login a{
     font-size: 16px;
     color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
 }
-.login__container--register a:hover {
+.login__container--register a:hover,
+.registro__container--login a:hover {
     text-decoration: underline;
 }
 .input{
@@ -107,6 +113,10 @@ body{
     height: 50px;
     letter-spacing: 1px;
     margin: 10px 0;
+}
+.registro__container--login{
+    font-size: 14px;
+    text-align: center;
 }
 .footer{
     display: flex;
