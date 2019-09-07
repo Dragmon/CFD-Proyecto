@@ -1,4 +1,7 @@
 $colorWhite: #ffffff;
+$colorGreen: #88fff5;
+$colorBlack: #000000;
+$backgroundGradient: linear-gradient(#2e89e6, #88fff5);
 
 body {
     margin: 0px;
@@ -60,6 +63,9 @@ p{
 .header__menu--profile p {
     color: $colorWhite;
 }
+
+/*===== Home ======*/
+
 .main{
     height: 300px;
     text-align: center;
@@ -167,16 +173,60 @@ p{
     margin: 0px;
 }
 
+/*===== 404 ======*/
+
+.main404{
+    height: calc(100vh - 200px);
+    text-align: center;
+    @include flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $backgroundGradient;
+}
+.main404__title{
+    color: $colorWhite;
+    font-size: 70px;
+    margin: 0px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+.main404__description{
+    color: $colorWhite;
+    font-size: 25px;
+    margin: 0px;
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: auto;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: auto;
+    }
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+/* ===== Footer =====*/
+
 .footer {
     /* @extend .flex; */
     @include flex;
-    background-color: #2e89e6;
+    background-color: $colorGreen;
     height: 100px;
     width: 100%;
 }
 
 .footer a {
-    color: white;
+    color: $colorBlack;
     cursor: pointer;
     font-size: 14px;
     padding-left: 30px;
